@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Tree Species Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-tree"></i>
+                <h1>Tree Species Classifier</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}" class="active">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero-content">
+                    <h2>About This Project</h2>
+                    <p>Learn about our tree species classification project, how it works, and the technology behind it.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>The Technology</h3>
+                        <p>This application uses deep learning to identify tree species from images. We've trained a convolutional neural network (CNN) on thousands of labeled images of various tree species. The model has learned to recognize patterns, textures, and shapes that are characteristic of different tree species.</p>
+                        <p>Our model is built using TensorFlow and Keras, with a pre-trained EfficientNet architecture that has been fine-tuned specifically for tree species recognition.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Tree Species Database</h3>
+                        <p>Our classifier can identify a wide range of common tree species, including:</p>
+                        <ul class="species-list">
+                            <li>Oak (Quercus)</li>
+                            <li>Maple (Acer)</li>
+                            <li>Pine (Pinus)</li>
+                            <li>Birch (Betula)</li>
+                            <li>Cedar (Cedrus)</li>
+                            <li>Spruce (Picea)</li>
+                            <li>Willow (Salix)</li>
+                            <li>Elm (Ulmus)</li>
+                            <li>Fir (Abies)</li>
+                            <li>Redwood (Sequoia)</li>
+                        </ul>
+                        <p>We're continuously expanding our database to include more species and improve accuracy.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>How to Get the Best Results</h3>
+                        <p>For the most accurate identification, follow these tips when taking photos:</p>
+                        <ul>
+                            <li>Take clear, well-lit photos</li>
+                            <li>Include distinctive features like leaves, bark, flowers, or fruits</li>
+                            <li>Try to minimize background clutter</li>
+                            <li>Take multiple photos from different angles if possible</li>
+                            <li>Include the whole leaf or a clear section of bark</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Development</h3>
+                        <p>This project was developed using:</p>
+                        <ul>
+                            <li>Python for backend processing</li>
+                            <li>TensorFlow and Keras for the machine learning model</li>
+                            <li>Flask for the web application framework</li>
+                            <li>HTML, CSS, and JavaScript for the user interface</li>
+                            <li>OpenCV and PIL for image processing</li>
+                        </ul>
+                        <p>The source code is available on GitHub, and we welcome contributions from the community.</p>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h3>Why Tree Identification Matters</h3>
+                    <p>Tree identification is important for various reasons:</p>
+                    <ul>
+                        <li><strong>Education:</strong> Learning about local flora enhances our understanding of ecosystems.</li>
+                        <li><strong>Conservation:</strong> Identifying native and invasive species helps in conservation efforts.</li>
+                        <li><strong>Gardening:</strong> Proper identification helps in providing appropriate care for trees.</li>
+                        <li><strong>Research:</strong> Accurate species identification is crucial for botanical research.</li>
+                        <li><strong>Forestry:</strong> Identifying tree species is essential for sustainable forest management.</li>
+                    </ul>
+                </div>
+
+                <div class="about-section">
+                    <h3>Future Improvements</h3>
+                    <p>We're continuously working to improve this application. Future updates may include:</p>
+                    <ul>
+                        <li>Expanding the database to include more tree and plant species</li>
+                        <li>Improving model accuracy through additional training</li>
+                        <li>Adding detailed information about each species, including care guides</li>
+                        <li>Implementing offline functionality for use in the field</li>
+                        <li>Adding location-based suggestions for likely species in your area</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h3>Ready to Identify a Tree?</h3>
+                    <p>Upload an image and let our AI help you identify the species.</p>
+                    <a href="{{ url_for('index') }}" class="cta-button">
+                        <i class="fas fa-camera"></i> Try It Now
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Tree Species Classifier | Powered by TensorFlow</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
